@@ -1,0 +1,194 @@
+#masterclass-section {
+  background: url('images/pizza4.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#masterclass-section ._wrapper {
+  flex-direction: column;
+  align-items: end;
+  padding: 95px 125px 200px 0;
+}
+
+.masterclass-section__title {
+  font-size: 41px;
+  text-transform: uppercase;
+  margin-bottom: 90px;
+  font-family: 'Lato';
+}
+
+.promo {
+  background: var(--main-color);
+  padding: 95px 65px 65px 65px;
+}
+
+.promo h3 {
+  font-family: 'Lato';
+  text-transform: uppercase;
+  font-size: 50px;
+  line-height: 1;
+}
+
+.promo p {
+  font-family: 'Lato';
+  font-size: 41px;
+  margin-top: 50px;
+  margin-bottom: 115px;
+  font-weight: 600;
+}
+
+.promo-info {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-size: 41px;
+  font-family: 'Lato';
+  text-transform: uppercase;
+}
+
+.promo-info b {
+  font-weight: 600;
+}
+
+.apply-btn {
+  position: relative;
+  background: var(--main-color);
+  padding: 60px 300px 30px 40px;
+  font-size: 41px;
+  font-family: 'Lato';
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 45px;
+  overflow: hidden;
+}
+
+.apply-btn::before {
+  position: absolute;
+  content: '';
+  left: -12%;
+  top: 0;
+  width: 130%;
+  height: 100%;
+  background: #000;
+  opacity: 0.1;
+  z-index: 1;
+  transform: scaleX(0) skew(-35deg);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+
+.apply-btn p {
+  z-index: 5;
+  position: relative;
+  user-select: none;
+}
+
+.apply-btn:hover::before {
+  transform-origin: left;
+  transform: scaleX(1) skew(-35deg);
+  transition: transform 0.3s opacity .3s;
+}
+
+.apply-btn:active::before {
+  opacity: 0.2;
+}
+
+
+@media(max-width: 1024px) {
+  #masterclass-section ._wrapper {
+    padding: 55px 95px 100px 0;
+  }
+
+  .masterclass-section__title {
+    margin-bottom: 30px;
+  }
+
+  .promo h3 {
+    font-size: 40px;
+  }
+
+  .promo p {
+    font-size: 31px;
+    margin-top: 30px;
+    margin-bottom: 85px;
+  }
+
+  .promo-info {
+    font-size: 31px;
+  }
+
+  .promo {
+    padding: 55px;
+  }
+
+  .apply-btn {
+    padding: 40px 200px 20px 30px;
+    font-size: 31px;
+    margin-top: 45px;
+  }
+}
+
+@media(max-width: 768px) {
+  #masterclass-section ._wrapper {
+    padding: 55px 55px 70px 30px;
+  }
+
+  .masterclass-section__title {
+    margin-bottom: 30px;
+  }
+
+  .promo {
+    padding: 45px;
+  }
+
+  .promo h3 {
+    font-size: 35px;
+  }
+
+  .promo p {
+    font-size: 29px;
+    margin-top: 20px;
+  }
+
+  .promo-info {
+    font-size: 29px;
+  }
+
+  .apply-btn {
+    padding: 30px 150px 20px 30px;
+    font-size: 29px;
+    margin-top: 25px;
+  }
+}
+
+
+@media(max-width: 500px) {
+  #masterclass-section ._wrapper {
+    padding: 55px 30px 70px 30px;
+  }
+}
+
+@media(max-width: 430px) {
+  .promo {
+    padding: 35px;
+  }
+
+  .promo h3 {
+    font-size: 32px;
+  }
+
+  .promo p {
+    font-size: 27px;
+    margin-top: 20px;
+    margin-bottom: 85px;
+  }
+
+  .promo-info {
+    font-size: 29px;
+  }
+
+  .apply-btn {
+    padding: 20px 100px 20px 30px;
+    font-size: 25px;
+  }
+}

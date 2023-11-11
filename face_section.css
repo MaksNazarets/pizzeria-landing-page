@@ -1,0 +1,172 @@
+/* ======= Face section ======= */
+
+#face_sect {
+  height: 100vh;
+  background: url("images/pizza.png");
+  background-size: cover;
+}
+
+#face_sect ._wrapper {
+  padding: 0 170px 0 170px;
+}
+
+#face_sect::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 198px;
+  background: var(--main-color);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#face_sect .container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  max-width: 1000px;
+  width: 100%;
+  height: auto;
+  transform: translateY(35px)
+}
+
+.main-title h1 {
+  font-size: 125px;
+  line-height: 104px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.main-title span {
+  font-size: 104px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+
+.btn {
+  position: relative;
+  display: block;
+  text-transform: uppercase;
+  font-size: 37px;
+  font-weight: 600;
+  padding: 20px 20px 20px 70px;
+  margin: 0 0 12px 0;
+  background: var(--main-color);
+  border: 4px solid #fff;
+  overflow: hidden;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  left: -12%;
+  top: 0;
+  width: 124%;
+  height: 100%;
+  background: #000;
+  opacity: 0.1;
+  z-index: 1;
+  transform: scaleX(0) skew(-45deg);
+  transform-origin: right;
+  transition: transform 0.3s;
+}
+
+.btn p {
+  z-index: 5;
+  position: relative;
+}
+
+.btn:hover::before {
+  transform-origin: left;
+  transform: scaleX(1) skew(-45deg);
+}
+
+.btn:active::before {
+  opacity: .2;
+}
+
+
+@media(max-width: 1200px) {
+  #face_sect ._wrapper {
+    padding: 0 100px 0 100px;
+  }
+}
+
+
+@media(max-width: 1024px) {
+  #face_sect ._wrapper {
+    padding: 0 50px 0 50px;
+  }
+
+  #face_sect::after {
+    height: 170px;
+  }
+
+  .main-title h1 {
+    font-size: 110px;
+    line-height: 95px;
+  }
+
+  .main-title span {
+    font-size: 95px;
+  }
+
+  .btn {
+    font-size: 32px;
+    font-weight: 600;
+    padding: 20px 20px 20px 70px;
+  }
+}
+
+
+@media(max-width: 768px) {
+  #face_sect .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .btn {
+    align-self: flex-end;
+  }
+}
+
+@media(max-width: 600px) {
+  #face_sect .container {
+    gap: 20px
+  }
+
+  .main-title h1 {
+    font-size: 80px;
+    line-height: 1;
+  }
+
+  .main-title span {
+    font-size: 64px;
+  }
+
+  .btn {
+    font-size: 25px;
+    padding: 15px 30px;
+    margin: 0 0 12px 0;
+  }
+}
+
+@media(max-width: 500px) {
+  #face_sect::after {
+    height: 120px;
+  }
+
+  .main-title h1 {
+    font-size: 70px;
+    line-height: 1;
+  }
+
+  .main-title span {
+    font-size: 60px;
+  }
+}
