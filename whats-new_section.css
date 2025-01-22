@@ -1,12 +1,18 @@
-/* ======== What's new section ======== */
-
 #whats-new_sect {
-  min-height: 610px;
+  padding: 50px;
 }
 
 #whats-new_sect ._wrapper {
   padding: 80px 300px 80px 130px;
   align-items: center;
+}
+
+.wn-items-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 30px;
 }
 
 #whats-new_sect .container {
@@ -15,18 +21,18 @@
 }
 
 #whats-new_sect .container::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
   width: 100%;
-  height: 190px;
+  height: 13rem;
   background: var(--main-color);
   z-index: -1;
 }
 
-#whats-new_sect .container>* {
+#whats-new_sect .container > * {
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -38,19 +44,19 @@
   top: 50%;
   transform: translateY(-50%);
   background: url("images/pizza2.png");
-  background-size: cover;
-  max-height: 450px;
-  max-width: 621px;
-  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  height: calc(100% - 100px); /* 100% - section padding */
   width: 100%;
   z-index: -5;
 }
 
 .vertical_text_container {
   justify-content: center;
-  padding: 0 65px 0 0;
-  max-width: 150px;
-  min-width: 100px;
+  padding-right: 4rem;
+  max-width: 9.3rem;
+  min-width: 9.3rem;
   width: 100%;
 }
 
@@ -58,75 +64,105 @@
   writing-mode: vertical-lr;
   text-orientation: mixed;
   transform: rotateZ(180deg);
-  font-size: 50px;
+  font-size: 3.1rem;
   font-weight: 300;
   letter-spacing: 0.08em;
 }
 
 .wn__main-text {
-  padding: 55px 0;
   justify-content: space-between;
   position: relative;
 }
 
-.wn__title {
-  font-family: 'Lato';
-  font-size: 41.7px;
+#whats-new_sect h2 {
+  font-family: "Lato";
+  font-size: 2.7rem;
   line-height: 1.2;
   font-weight: 900;
+  margin-bottom: 2rem;
 }
 
 .wn__main-text p {
-  font-family: 'Lato';
-  font-size: 33px;
+  font-family: "Lato";
+  font-size: 2rem;
   font-weight: 500;
 }
 
-
-@media(max-width: 1200px) {
+@media (max-width: 1200px) {
   #whats-new_sect ._wrapper {
-    padding: 80px 200px 80px 130px;
+    padding: 30px 150px 30px 100px;
+  }
+
+  #whats-new_sect h2 {
+    margin-bottom: 1rem;
+  }
+
+  #whats-new_sect .container::before {
+    height: 12.5rem;
+    transform: translateY(calc(-50% - 0.5rem));
   }
 }
 
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
   #whats-new_sect ._wrapper {
-    padding: 80px 100px 80px 100px;
+    padding: 50px;
   }
 
   .vertical_text_container {
-    padding: 0 35px 0 0;
+    padding-right: 2rem;
     max-width: 100px;
     min-width: 50px;
   }
+
+  #whats-new_sect .container::before {
+    height: 12rem;
+    transform: translateY(-50%);
+  }
+
+  .vertical_text {
+    font-size: 2.9rem;
+  }
+
+  .wn__main-text h2 {
+    font-size: 2rem;
+  }
+
+  .wn__main-text p {
+    font-size: 1.9rem;
+  }
 }
 
-@media(max-width: 768px) {
-  #whats-new_sect {
-    min-height: unset;
+@media (max-width: 768px) {
+  #whats-new_sect .container::before {
+    height: 10.5rem;
+    transform: translateY(calc(-50% - 1rem));
   }
 
   #whats-new_sect ._wrapper {
-    padding: 30px;
+    padding: 30px 0;
   }
 
-  .wn__main-text>p {
-    margin-top: 20px;
+  .wn-items-container {
+    gap: 0.5rem;
   }
 
-  .wn__main-text>h2 {
-    margin-bottom: 25px;
+  #whats-new_sect h2 {
+    margin-bottom: 1rem;
+    font-size: 2.2rem;
+  }
+
+  #whats-new_sect p {
+    font-size: 1.8rem;
   }
 }
 
-
-@media(max-width: 600px) {
-  .wn__main-text {
-    padding: 0;
+@media (max-width: 600px) {
+  #whats-new_sect {
+    padding: 50px 20px;
   }
 
-  .wn__title {
-    margin-bottom: 12px!important;
+  .wn__main-text {
+    padding: 0;
   }
 
   .vertical_text_container {
@@ -134,26 +170,57 @@
   }
 
   #whats-new_sect ._wrapper {
-    padding: 70px 0;
-  }
-
-  #whats-new_sect .img-bg {
-    max-height: 100%;
-    max-width: unset;
+    padding: 20px 0;
   }
 
   #whats-new_sect .container {
     padding: 0 20px;
   }
 
-  .wn__main-text p {
-    font-size: 29px;
-  }
-}
-
-@media(max-width: 530px) {
   #whats-new_sect .container::before {
-    height: 210px;
+    display: none;
+  }
+
+  #whats-new_sect .img-bg {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .wn-items-container {
+    gap: 0;
+  }
+
+  #whats-new_sect h2 {
+    margin-bottom: 0.75rem !important;
+    font-size: 2rem;
+  }
+
+  #whats-new_sect p {
+    position: relative;
+    font-size: 1.7rem;
+    padding: 0.5rem 0;
+  }
+
+  #whats-new_sect p:first-child::after,
+  #whats-new_sect p:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 0;
+    background: var(--main-color);
+    width: calc(100% + 40px);
+    height: 100%;
+    z-index: -1;
   }
 }
 
+@media (max-width: 530px) {
+  #whats-new_sect {
+    padding: 30px 10px;
+  }
+
+  #whats-new_sect p {
+    font-size: 1.5rem;
+  }
+}

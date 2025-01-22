@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;900&family=Raleway:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;900&family=Raleway:wght@700&display=swap");
 
-/* ======= Clearing of some default styles ======= */
+/* ======= Reseting of some default styles ======= */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   text-decoration: none;
   color: #fff;
-
 }
 
 ul {
@@ -20,9 +19,8 @@ ul {
 /* =============================================== */
 
 html {
-  scroll-behavior: smooth
+  scroll-behavior: smooth;
 }
-
 
 :root {
   --main-color: #ffba00;
@@ -47,7 +45,7 @@ section {
   align-items: center;
 }
 
-._wrapper>* {
+._wrapper > * {
   z-index: 1;
 }
 
@@ -65,7 +63,7 @@ section {
 ::-webkit-scrollbar-thumb {
   background: var(--main-color);
   border-radius: 5px;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -75,5 +73,3 @@ section {
 ::-webkit-scrollbar-thumb:active {
   background: #966e00;
 }
-
-@media (max-width: 1440px) {}

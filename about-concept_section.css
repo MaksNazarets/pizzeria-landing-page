@@ -2,20 +2,20 @@
   flex-direction: column;
   gap: 40px;
   padding: 110px 100px;
-  font-family: 'Raleway';
+  font-family: "Raleway";
 }
 
-
 .about-concept__title {
-  font-family: 'Lato';
+  font-family: "Lato";
 }
 
 .about-concept__title,
-.about-concept__title>* {
+.about-concept__title > * {
   color: var(--main-color);
   text-transform: uppercase;
+  text-align: center;
   font-weight: 400;
-  font-size: 41px;
+  font-size: 2.5rem;
 }
 
 .about-concept__title span {
@@ -23,54 +23,56 @@
 }
 
 .about-concept__description {
-  font-size: 21px;
+  font-size: 1.55rem;
   text-align: center;
   line-height: 2;
 }
 
 .tag-list {
-  font-size: 21px;
+  font-size: 1.35rem;
   display: flex;
   gap: 40px;
   font-weight: 600;
+  text-align: center;
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   #about-concept-section ._wrapper {
     padding: 70px 30px;
     gap: 30px;
   }
 
   .about-concept__title,
-  .about-concept__title>* {
-    font-size: 35px;
+  .about-concept__title > * {
+    font-size: 2.1rem;
   }
 
   .about-concept__description {
-    font-size: 21px;
+    font-size: 1.3rem;
+  }
+
+  .tag-list {
+    font-size: 1.2rem;
   }
 }
 
-@media(max-width: 600px) {
+@media (max-width: 600px) {
   .tag-list {
     display: none;
   }
 }
 
-@media(max-width: 500px) {
+@media (max-width: 500px) {
+  #about-concept-section {
+    font-size: 0.7rem;
+  }
+
   #about-concept-section ._wrapper {
     padding: 50px 30px;
     gap: 20px;
   }
 
-  .about-concept__title,
-  .about-concept__title>* {
-    font-size: 31px;
-    text-align: center;
-  }
-
   .about-concept__description {
-    font-size: 17px;
-    line-height: 1.5;
+    line-height: 1.3;
   }
 }

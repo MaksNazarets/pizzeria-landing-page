@@ -1,38 +1,39 @@
 #masterclass-section {
-  background: url('images/pizza4.png');
+  background: url("images/pizza4.png");
   background-repeat: no-repeat;
   background-size: cover;
+  font-size: 1rem;
 }
 
 #masterclass-section ._wrapper {
   flex-direction: column;
   align-items: end;
-  padding: 95px 125px 200px 0;
+  padding: 95px 125px 150px 0;
 }
 
 .masterclass-section__title {
-  font-size: 41px;
+  font-size: 2.5em;
   text-transform: uppercase;
-  margin-bottom: 90px;
-  font-family: 'Lato';
+  margin-bottom: 1.5em;
+  font-family: "Lato";
 }
 
 .promo {
   background: var(--main-color);
-  padding: 95px 65px 65px 65px;
+  padding: 95px 70px 70px 65px;
 }
 
 .promo h3 {
-  font-family: 'Lato';
+  font-family: "Lato";
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 2.7em;
   line-height: 1;
 }
 
 .promo p {
-  font-family: 'Lato';
-  font-size: 41px;
-  margin-top: 50px;
+  font-family: "Lato";
+  font-size: 2.3em;
+  margin-top: 30px;
   margin-bottom: 115px;
   font-weight: 600;
 }
@@ -41,8 +42,8 @@
   display: flex;
   flex-direction: column;
   align-items: end;
-  font-size: 41px;
-  font-family: 'Lato';
+  font-size: 2.5em;
+  font-family: "Lato";
   text-transform: uppercase;
 }
 
@@ -53,18 +54,24 @@
 .apply-btn {
   position: relative;
   background: var(--main-color);
-  padding: 60px 300px 30px 40px;
-  font-size: 41px;
-  font-family: 'Lato';
+  padding: 1.1em 5em 0.6em 1em;
+  font-size: 2.5em;
+  font-family: "Lato";
   text-transform: uppercase;
   font-weight: 600;
-  margin-top: 45px;
+  margin-top: 35px;
   overflow: hidden;
+}
+
+.apply-btn p {
+  z-index: 5;
+  position: relative;
+  user-select: none;
 }
 
 .apply-btn::before {
   position: absolute;
-  content: '';
+  content: "";
   left: -12%;
   top: 0;
   width: 130%;
@@ -77,24 +84,20 @@
   transition: transform 0.3s;
 }
 
-.apply-btn p {
-  z-index: 5;
-  position: relative;
-  user-select: none;
-}
-
 .apply-btn:hover::before {
   transform-origin: left;
-  transform: scaleX(1) skew(-35deg);
-  transition: transform 0.3s opacity .3s;
+  transform:  scaleX(1) skew(-35deg);
+  transition: transform 0.3s opacity 0.3s;
 }
 
 .apply-btn:active::before {
   opacity: 0.2;
 }
 
-
-@media(max-width: 1024px) {
+@media (max-width: 1024px) {
+  #masterclass-section {
+    font-size: 0.9rem;
+  }
   #masterclass-section ._wrapper {
     padding: 55px 95px 100px 0;
   }
@@ -103,18 +106,8 @@
     margin-bottom: 30px;
   }
 
-  .promo h3 {
-    font-size: 40px;
-  }
-
-  .promo p {
-    font-size: 31px;
-    margin-top: 30px;
-    margin-bottom: 85px;
-  }
-
   .promo-info {
-    font-size: 31px;
+    font-size: 2.2em;
   }
 
   .promo {
@@ -122,73 +115,47 @@
   }
 
   .apply-btn {
-    padding: 40px 200px 20px 30px;
-    font-size: 31px;
-    margin-top: 45px;
+    margin-top: 20px;
+    font-size: 2.3em;
   }
 }
 
-@media(max-width: 768px) {
-  #masterclass-section ._wrapper {
-    padding: 55px 55px 70px 30px;
+@media (max-width: 768px) {
+  #masterclass-section {
+    font-size: 0.8rem;
   }
 
-  .masterclass-section__title {
-    margin-bottom: 30px;
+  #masterclass-section ._wrapper {
+    padding: 55px 55px 70px 30px;
   }
 
   .promo {
     padding: 45px;
   }
-
-  .promo h3 {
-    font-size: 35px;
-  }
-
-  .promo p {
-    font-size: 29px;
-    margin-top: 20px;
-  }
-
-  .promo-info {
-    font-size: 29px;
-  }
-
-  .apply-btn {
-    padding: 30px 150px 20px 30px;
-    font-size: 29px;
-    margin-top: 25px;
-  }
 }
 
-
-@media(max-width: 500px) {
+@media (max-width: 500px) {
   #masterclass-section ._wrapper {
     padding: 55px 30px 70px 30px;
   }
 }
 
-@media(max-width: 430px) {
+@media (max-width: 430px) {
+  #masterclass-section ._wrapper {
+    padding: 50px 20px;
+  }
+
   .promo {
     padding: 35px;
   }
 
-  .promo h3 {
-    font-size: 32px;
-  }
-
   .promo p {
-    font-size: 27px;
+    font-size: 2em;
     margin-top: 20px;
     margin-bottom: 85px;
   }
 
   .promo-info {
-    font-size: 29px;
-  }
-
-  .apply-btn {
-    padding: 20px 100px 20px 30px;
-    font-size: 25px;
+    font-size: 2em;
   }
 }
