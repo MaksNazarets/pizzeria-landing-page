@@ -7,6 +7,12 @@ header {
   z-index: 100;
 }
 
+header.sticky {
+  position: fixed;
+  top: 5px;
+  background: #161616b1;
+}
+
 header ._wrapper {
   justify-content: space-between;
 }
@@ -17,9 +23,18 @@ header ._wrapper {
   height: 100%;
   font-size: 2rem;
   font-weight: 800;
-  padding: 0.8rem 0.8rem 0.8rem 8rem;
+  padding: 0.8rem;
   text-align: right;
   z-index: 10;
+}
+
+header.sticky #logo {
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+header.sticky *{
+  transition: .1s;
 }
 
 #logo span {
@@ -38,6 +53,10 @@ header ._wrapper {
   z-index: -1;
 }
 
+header.sticky #logo::before {
+  display: none;
+}
+
 #menu {
   display: flex;
   padding: 0.8rem;
@@ -50,8 +69,12 @@ header ._wrapper {
 
 #menu li a {
   font-family: "Lato";
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   position: relative;
+}
+
+header.sticky #menu li a {
+  font-size: 1.3rem;
 }
 
 #menu li a::after {
